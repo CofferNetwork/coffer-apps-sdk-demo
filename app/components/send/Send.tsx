@@ -22,7 +22,7 @@ import { BitcoinNetwork } from "@coffer-network/apps-sdk";
 
 const formSchema = z.object({
   recipient: z.string(),
-  amount: z.number(),
+  amount: z.string(),
   fee: z.number(),
 });
 
@@ -47,7 +47,7 @@ const Send = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       recipient: "",
-      amount: 0,
+      amount: "",
     },
   });
 
@@ -60,13 +60,13 @@ const Send = () => {
         destinationAddresses: [
           {
             address: values.recipient,
-            amount: values.amount,
+            amount: Number(values.amount),
           },
         ],
         asset: "BITCOIN",
         assetType: "btc",
         networkType: BitcoinNetwork.Testnet,
-        txFeeRate: values.amount,
+        txFeeRate: values.fee,
       })
       .then(() => {
         setIsCreating(false);
@@ -96,7 +96,7 @@ const Send = () => {
                     <span
                       className="cursor-pointer"
                       onClick={() => {
-                        form.setValue("amount", btcBalance?.balances || 0);
+                        form.setValue("amount", btcBalance?.balances ? String(btcBalance?.balances) : "0");
                       }}
                     >
                       {btcBalance?.balances || "--"} BTC
