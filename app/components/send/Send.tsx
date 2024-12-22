@@ -116,7 +116,18 @@ const Send = () => {
                 <FormControl>
                   <Input
                     {...field}
-                    onChange={(e) => field.onChange(Number(e.target.value))}
+                    onChange={(evt) => {
+                      const targetValue = evt.target.value;
+                      const inputValue = Number(targetValue);
+
+                      if (targetValue.includes("-")) return;
+
+                      if (!/^\d*\.?\d{0,18}$/.test(targetValue)) {
+                        return;
+                      }
+
+                      field.onChange(Number(evt.target.value))
+                    }}
                     defaultValue={String(field.value)}
                     placeholder="Amount"
                   />
