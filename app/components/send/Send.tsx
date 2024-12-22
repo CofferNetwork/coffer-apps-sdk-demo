@@ -126,7 +126,7 @@ const Send = () => {
                         return;
                       }
 
-                      field.onChange(Number(evt.target.value))
+                      field.onChange(targetValue)
                     }}
                     defaultValue={String(field.value)}
                     placeholder="Amount"
