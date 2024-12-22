@@ -7,10 +7,15 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@coffer-network/apps-message-channel@0.0.1", "@coffer-network/apps-message-channel@^0.0.1":
+"@coffer-network/apps-message-channel@0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@coffer-network/apps-message-channel/-/apps-message-channel-0.0.1.tgz#700f312b179b0d1f6300628e9a3dd1fdde203fde"
   integrity sha512-uN9C+faiL0GrY1c/26RWYz4ALvePOfjionGzWkQxnRnKJigWOwaWXarRpEAWRKHV8CC1NB7ylursa83oW7nb1w==
+
+"@coffer-network/apps-message-channel@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@coffer-network/apps-message-channel/-/apps-message-channel-0.0.2.tgz#27c24129322c3b00cb184bbdbcd56f3da3979dc0"
+  integrity sha512-mohzCb4YjZVgr9iEZZbmjbKp28Gv1/cQe/tJl2Lu2cquMHJQM3tvtKDNspuLe5702b43YIinenriAvvXIcWluA==
 
 "@coffer-network/apps-react-sdk@^0.0.3":
   version "0.0.3"

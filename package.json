@@ -11,7 +11,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@coffer-network/apps-message-channel": "^0.0.1",
+    "@coffer-network/apps-message-channel": "^0.0.2",
     "@coffer-network/apps-react-sdk": "^0.0.3",
     "@coffer-network/apps-sdk": "^0.0.3",
     "@hookform/resolvers": "^3.9.1",
