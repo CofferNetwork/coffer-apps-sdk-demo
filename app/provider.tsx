@@ -9,7 +9,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   const queryClient = getQueryClient();
 
   return (
-    <CofferAppProvider opts={{ sdk: { origin: "https://localhost:5173" } }}>
+    <CofferAppProvider opts={{ sdk: { origin: "https://coffer-apps-sdk-demo.cofferusercontent.com" } }}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </CofferAppProvider>
   );
